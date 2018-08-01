@@ -22,10 +22,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '8*l)z2!)u!d#&9s*0-=$4%*#9n3jz275q9&$(fg^!yz+h3@54x'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+# Set debugging allowed hosts appropriately 
+if os.getenv('DJANGO_ENV') == 'prod':
+    DEBUG = False
+    ALLOWED_HOSTS = ['.aswwu.com']
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = []
 
 
 # Application definition
