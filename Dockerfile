@@ -5,15 +5,18 @@ RUN apt-get update && \
     pip install uwsgi && \
     pip install pipenv
 
-COPY . /opt/django_server
+RUN useradd -ms /bin/bash django
+WORKDIR /home/django
 
-WORKDIR /opt/django_server
+COPY . django_server
 
-RUN pipenv install --system --deploy
+RUN cd django_server && \
+    pipenv install --system --deploy
 
 ENV DJANGO_ENV=prod
 ENV DOCKER_CONTAINER=1
 
 EXPOSE 8000
 
-CMD ["uwsgi", "--ini", "/opt/django_server/uwsgi.ini"]
+USER django
+CMD ["uwsgi", "--ini", "/home/django/django_server/uwsgi.ini"]
