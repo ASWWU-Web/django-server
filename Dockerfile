@@ -14,8 +14,8 @@ WORKDIR /home/django
 
 COPY . django_server
 
-WORKDIR /home/django/django_server && \
-    pipenv install --system --deploy
+WORKDIR /home/django/django_server
+RUN pipenv install --system --deploy
 
 ENV DJANGO_ENV=prod
 ENV DOCKER_CONTAINER=1
