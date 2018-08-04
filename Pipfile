@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 django = "~=2.1"
 djangorestframework = "~=3.8"
-uwsgi = "~=2.0"
 
 [dev-packages]
 
