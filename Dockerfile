@@ -1,16 +1,18 @@
 FROM python:3.7
 
+MAINTAINER aswwu.webmaster@wallawalla.edu
+
 RUN apt-get update && \
-    apt-get install -y && \
-    pip install uwsgi && \
-    pip install pipenv
+    apt-get install -y --no-install-recommends && \
+    rm /var/lib/apt/lists/* \
+    pip install pipenv~=2018.7
 
 RUN useradd -ms /bin/bash django
 WORKDIR /home/django
 
 COPY . django_server
 
-RUN cd django_server && \
+WORKDIR /home/django/django_server && \
     pipenv install --system --deploy
 
 ENV DJANGO_ENV=prod
