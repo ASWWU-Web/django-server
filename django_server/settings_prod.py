@@ -1,9 +1,10 @@
 import os
 
+
+# prod settings
 SECRET_KEY = 'DIFFERENT-IN-PRODUCTION'
 DEBUG = False
 ALLOWED_HOSTS = ['.aswwu.com']
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
