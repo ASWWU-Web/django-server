@@ -27,7 +27,7 @@ USE_TZ = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'default',
+        'NAME': 'django',
         'USER': os.getenv('MYSQL_USER', 'root'),
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
