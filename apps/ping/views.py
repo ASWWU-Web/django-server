@@ -6,5 +6,6 @@ class Ping(APIView):
     """
     Ping sample endpoint.
     """
-    def get(self, request, format=None):
+    @staticmethod
+    def get(request):
         return Response({'result': 'pong!'})
