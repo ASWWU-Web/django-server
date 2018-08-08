@@ -48,6 +48,9 @@ DATABASES = {
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
         'PORT': os.getenv('MYSQL_PORT', 8889),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     },
     'elections': {
         'ENGINE': 'django.db.backends.mysql',
@@ -56,6 +59,9 @@ DATABASES = {
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
         'PORT': os.getenv('MYSQL_PORT', 8889),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     },
     'jobs': {
         'ENGINE': 'django.db.backends.mysql',
@@ -64,6 +70,9 @@ DATABASES = {
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
         'PORT': os.getenv('MYSQL_PORT', 8889),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     },
     'pages': {
         'ENGINE': 'django.db.backends.mysql',
@@ -72,6 +81,9 @@ DATABASES = {
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
         'PORT': os.getenv('MYSQL_PORT', 8889),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     },
     'people': {
         'ENGINE': 'django.db.backends.mysql',
@@ -80,6 +92,9 @@ DATABASES = {
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
         'PORT': os.getenv('MYSQL_PORT', 8889),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     },
 }
 
@@ -91,6 +106,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
