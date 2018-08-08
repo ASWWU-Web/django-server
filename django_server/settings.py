@@ -1,13 +1,17 @@
 import os
 
 
-# set debug and hosts
+# set security settings
 if os.getenv('DJANGO_ENV') == 'prod':
     DEBUG = False
     ALLOWED_HOSTS = ['.aswwu.com']
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
 else:
     DEBUG = True
-    ALLOWED_HOSTS = []
 
 # base
 SECRET_KEY = os.getenv('SECRET_KEY', 'dev')
