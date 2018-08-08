@@ -1,10 +1,10 @@
 language: python
 
-python:
-  # temporary workaround for python 3.7
-  - "3.7"
-  dist: xenial
-  sudo: true
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
 
 services:
   - mysql
