@@ -1,7 +1,7 @@
 django-server
 -------------
-The ASWWU Web API server for accessing content on our sites.
-
+The API server for accessing content across the ASWWU websites. Built with Django 2, the Django REST Framework, and
+Python 3.7.
 
 Local Deployment
 ----------------
