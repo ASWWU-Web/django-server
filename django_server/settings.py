@@ -1,3 +1,15 @@
+# sheldon woodward
+# last updated August 7, 2018
+#
+#
+# --Environment Variables--
+# DJANGO_ENV - Deployment environment. Use 'prod' for production. Defaults to nothing.
+# SECRET_KEY - Secret key used for django security. Defaults to 'dev'.
+# MYSQL_USER - MySQL username. Defaults to 'root'.
+# MYSQL_PASSWORD - MySQL password. Defaults to 'root'.
+# MYSQL_HOST - MySQL host. Defaults to '127.0.0.1'.
+# MYSQL_PORT - MySQL port. Defaults to '8889'.
+
 import os
 
 
