@@ -16,7 +16,7 @@ env:
     MYSQL_PORT="3306"
 
 before_install:
-  - mysql -e 'set global SQL_MODE="NO_ENGINE_SUBSTITUTION";'
+  - mysql -e 'set global SQL_MODE="STRICT_ALL_TABLES";'
 
 install:
   - pip install pipenv
