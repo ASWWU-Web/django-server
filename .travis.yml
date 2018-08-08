@@ -22,5 +22,5 @@ before_script:
   - pipenv install
 
 script:
-  - pipenv run manage.py test
+  - pipenv run python manage.py test
 
