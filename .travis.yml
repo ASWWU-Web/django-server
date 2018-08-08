@@ -16,9 +16,6 @@ env:
     MYSQL_PORT="3306"
 
 install:
-  - pip install pipenv
-
-before_script:
   - pipenv install
 
 script:
