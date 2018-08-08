@@ -10,7 +10,8 @@ mysqlclient = "~=1.3"
 pymysql = "~=0.9"
 
 [dev-packages]
-django-nose = "~=1.4"
+coverage = "~=4.5"
+codacy-coverage = "~=1.3"
 
 [requires]
 python_version = "3.7"
