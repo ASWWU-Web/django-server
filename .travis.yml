@@ -20,7 +20,7 @@ before_install:
 
 install:
   - pip install pipenv
-  - pipenv install
+  - pipenv install --dev
 
 script:
   - pipenv run coverage run --source='.' manage.py test
