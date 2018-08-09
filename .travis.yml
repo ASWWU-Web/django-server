@@ -25,5 +25,5 @@ install:
 script:
   - pipenv run coverage run --source='.' manage.py test
   - pipenv run coverage xml
-  - pipenv run python-codacy-coverage -r coverage.xml
+  - pipenv run python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
