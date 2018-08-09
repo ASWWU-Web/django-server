@@ -9,7 +9,18 @@ Use these steps to setup your local developemnt environment.
 
 MySQL
 +++++
-MySQL can be installed with MAMP (easy but big) or Docker (hard but lightweight). Use MySQL version 5.7.22.
+MySQL can be installed with Brew (not recommended), MAMP (easy but big), or Docker (hard but lightweight). Use MySQL
+version 5.7.22.
+
+Brew
+....
+1. Install with brew
+
+::
+
+  $ brew install mysql
+
+2. Save yourself a lot of pain and skip to the Docker section
 
 MAMP
 ....
@@ -32,7 +43,7 @@ Docker
     --name=mysql-server \
     mysql/mysql-server:5.7.22
 
-2. Enter the MySQL command line
+2. Enter the MySQL command line, you may need to restart the container first
 
 ::
 
@@ -60,7 +71,7 @@ Database Setup
 
 Django Setup
 ++++++++++++
-1. Install dependencies
+1. Install dependencies. NOTE: mysqlclient can cause issues on Mac. Ensure that you installed mysql with brew
 
 ::
 
