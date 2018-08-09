@@ -1,5 +1,8 @@
 django-server
 -------------
+.. image:: https://api.codacy.com/project/badge/Grade/dc03c99f843342e895b1a861ad2ec0f7    :target: https://www.codacy.com/project/aswwuwebmaster/django-server/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ASWWU-Web/django-server&amp;utm_campaign=Badge_Grade_Dashboard
+
+
 The API server for accessing content across the ASWWU websites. Built with Django 2, the Django REST Framework, and
 Python 3.7.
 
