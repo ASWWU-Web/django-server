@@ -14,8 +14,6 @@ env:
     MYSQL_PASSWORD=""
     MYSQL_HOST="127.0.0.1"
     MYSQL_PORT="3306"
-    PIPENV_IGNORE_VIRTUALENVS=1
-    PIPENV_VENV_IN_PROJECT=1
 
 before_install:
   - mysql -e 'set global SQL_MODE="STRICT_ALL_TABLES";'
@@ -25,7 +23,8 @@ install:
   - pipenv install
 
 script:
-  - ./.venv/bin/coverage run --source='.' manage.py test
-  - ./.venv/bin/coverage xml
-  - ./.venv/bin/python-codacy-coverage -r coverage.xml
+  - pipenv shell
+  - coverage run --source='.' manage.py test
+  - coverage xml
+  - python-codacy-coverage -r coverage.xml
 
