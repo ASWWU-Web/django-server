@@ -86,9 +86,9 @@ DATABASES = {
             'COLLATION': 'utf8mb4_unicode_ci',
         },
     },
-    'pages': {
+    'mask': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pages',
+        'NAME': 'mask',
         'USER': os.getenv('MYSQL_USER', 'root'),
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
@@ -101,9 +101,9 @@ DATABASES = {
             'COLLATION': 'utf8mb4_unicode_ci',
         },
     },
-    'people': {
+    'pages': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'people',
+        'NAME': 'pages',
         'USER': os.getenv('MYSQL_USER', 'root'),
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'root'),
         'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),

@@ -68,8 +68,8 @@ Database Setup
   mysql> CREATE DATABASE django CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
   mysql> CREATE DATABASE elections CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
   mysql> CREATE DATABASE jobs CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+  mysql> CREATE DATABASE mask CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
   mysql> CREATE DATABASE pages CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-  mysql> CREATE DATABASE people CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
 
