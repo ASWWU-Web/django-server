@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from apps.ping import views
+from django_server.ping import views
 
 
 urlpatterns = [
